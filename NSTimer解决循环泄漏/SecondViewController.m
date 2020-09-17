@@ -10,7 +10,7 @@
 
 @interface SecondViewController ()
 
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, weak) NSTimer *timer;
 
 @end
 
@@ -26,8 +26,9 @@
     /**
      只有repeats为YES时重复触发定时器时才会出现内存泄漏的问题
      */
-    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerRun) userInfo:nil repeats:NO];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    self.timer = timer;
     /**
      下面的这种带block的写法，当repeat为YES时，如果不使用weakSelf时，也是存在内存泄漏，但是当使用的是weakSelf时，内存泄漏就不存在了。
      */
