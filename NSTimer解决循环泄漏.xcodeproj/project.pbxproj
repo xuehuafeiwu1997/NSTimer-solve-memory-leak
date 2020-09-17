@@ -13,6 +13,7 @@
 		B68D91202512FEEC00401A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68D911E2512FEEC00401A04 /* LaunchScreen.storyboard */; };
 		B68D91232512FEEC00401A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B68D91222512FEEC00401A04 /* main.m */; };
 		B68D912B2512FFF600401A04 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68D912A2512FFF600401A04 /* SecondViewController.m */; };
+		B68D912F25130BC100401A04 /* XMYProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B68D912E25130BC100401A04 /* XMYProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		B68D91222512FEEC00401A04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B68D91292512FFF600401A04 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B68D912A2512FFF600401A04 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B68D912D25130BC100401A04 /* XMYProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMYProxy.h; sourceTree = "<group>"; };
+		B68D912E25130BC100401A04 /* XMYProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMYProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		B68D910F2512FEE400401A04 /* NSTimer解决循环泄漏 */ = {
 			isa = PBXGroup;
 			children = (
+				B68D912C25130BA000401A04 /* 解决方法二 */,
 				B68D91102512FEE400401A04 /* AppDelegate.h */,
 				B68D91112512FEE400401A04 /* AppDelegate.m */,
 				B68D91162512FEE400401A04 /* ViewController.h */,
@@ -71,6 +75,15 @@
 				B68D91222512FEEC00401A04 /* main.m */,
 			);
 			path = "NSTimer解决循环泄漏";
+			sourceTree = "<group>";
+		};
+		B68D912C25130BA000401A04 /* 解决方法二 */ = {
+			isa = PBXGroup;
+			children = (
+				B68D912D25130BC100401A04 /* XMYProxy.h */,
+				B68D912E25130BC100401A04 /* XMYProxy.m */,
+			);
+			path = "解决方法二";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68D912F25130BC100401A04 /* XMYProxy.m in Sources */,
 				B68D912B2512FFF600401A04 /* SecondViewController.m in Sources */,
 				B68D91182512FEE400401A04 /* ViewController.m in Sources */,
 				B68D91122512FEE400401A04 /* AppDelegate.m in Sources */,

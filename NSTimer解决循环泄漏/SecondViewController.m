@@ -7,10 +7,11 @@
 //
 
 #import "SecondViewController.h"
+#import "XMYProxy.h"
 
 @interface SecondViewController ()
 
-@property (nonatomic, weak) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -26,7 +27,7 @@
     /**
      只有repeats为YES时重复触发定时器时才会出现内存泄漏的问题
      */
-    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:[XMYProxy proxyWithTarget:self] selector:@selector(timerRun) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     self.timer = timer;
     /**
